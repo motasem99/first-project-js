@@ -7,6 +7,21 @@ document.querySelector('.toggle-settings .fa-gear').onclick = function () {
   document.querySelector('.settings-box').classList.toggle('open');
 };
 
+// switch colors
+const colorsLi = document.querySelectorAll('.colors-list li');
+
+// loop on all list item
+colorsLi.forEach((li) => {
+  // click on every list item
+  li.addEventListener('click', (e) => {
+    // set color on root
+    document.documentElement.style.setProperty(
+      '--main-color',
+      e.target.dataset.color
+    );
+  });
+});
+
 // Select Landing Page Element
 let landingPage = document.querySelector('.landing-page');
 
