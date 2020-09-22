@@ -11,4 +11,4 @@ setInterval(function () {
   // change background image Url
   landingPage.style.backgroundImage =
     'url("img/' + imgsArray[randomNumber] + '")';
-}, 5000);
+}, 3000);
