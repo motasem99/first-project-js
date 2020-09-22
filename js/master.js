@@ -1,3 +1,13 @@
+// check if there is local storage color option
+let mainColors = localStorage.getItem('color_option');
+
+if (mainColors !== null) {
+  document.documentElement.style.setProperty(
+    '--main-color',
+    localStorage.getItem('color_option')
+  );
+}
+
 // toggle spin class on icon
 document.querySelector('.toggle-settings .fa-gear').onclick = function () {
   // toggle class fa-spin for rotation
@@ -19,6 +29,16 @@ colorsLi.forEach((li) => {
       '--main-color',
       e.target.dataset.color
     );
+    // set color on local storage
+    localStorage.setItem('color_option', e.target.dataset.color);
+
+    // remove active class from all children
+    e.target.parentElement.querySelectorAll('.active').forEach((element) => {
+      element.classList.remove('active');
+    });
+
+    // add active class on self
+    e.target.classList.add('active');
   });
 });
 
