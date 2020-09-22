@@ -8,7 +8,7 @@ body {
 /* Start Settings Box */
 .settings-box {
   position: fixed;
-  left: -200;
+  left: -200px;
   top: 0;
   background-color: #fff;
   width: 200px;
@@ -19,17 +19,17 @@ body {
 .settings-box.open {
   left: 0;
 }
-.settings-box .fa-gear {
+.settings-box .toggle-settings {
   position: absolute;
   right: -30px;
   top: 100px;
   background-color: #fff;
-  padding: 8px 0;
-  width: 30px;
   text-align: center;
   cursor: pointer;
 }
-.settings-box .settings-container {
+.settings-box .toggle-settings .fa-gear {
+  width: 30px;
+  padding: 8px 0;
 }
 
 /* End Settings Box */
