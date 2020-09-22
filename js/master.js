@@ -2,10 +2,18 @@
 let mainColors = localStorage.getItem('color_option');
 
 if (mainColors !== null) {
-  document.documentElement.style.setProperty(
-    '--main-color',
-    localStorage.getItem('color_option')
-  );
+  document.documentElement.style.setProperty('--main-color', mainColors);
+
+  // remove active class from all colors list item
+  document.querySelectorAll('.colors-list li').forEach((element) => {
+    element.classList.remove('active');
+
+    // add active class on element with data-color === local storage item
+    if (element.dataset.color === mainColors) {
+      // add active class
+      element.classList.add('active');
+    }
+  });
 }
 
 // toggle spin class on icon
