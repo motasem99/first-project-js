@@ -92,8 +92,7 @@ randomBackEl.forEach((span) => {
 
     // add active class on self
     e.target.classList.add('active');
-
-    if (e.target.dataset.background === 'yes') {
+    if (e.target.dataset.backgrounds === 'yes') {
       backgroundOption = true;
       randomizeImgs();
       localStorage.setItem('background_option', true);
