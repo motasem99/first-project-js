@@ -126,3 +126,30 @@ function randomizeImgs() {
 }
 
 randomizeImgs();
+
+// select skills selector
+let ourSkills = document.querySelector('.skills');
+
+window.onscroll = function () {
+  // skills offset top
+  let skillsOffsetTop = ourSkills.offsetTop;
+
+  // skills outer height
+  let skillsOuterHeight = ourSkills.offsetHeight;
+
+  // window Height
+  let windowHeight = this.innerHeight;
+
+  // window scrollTop
+  let windowScrollTop = this.pageYOffset;
+
+  if (windowScrollTop > skillsOffsetTop + skillsOuterHeight - windowHeight) {
+    let allSkills = document.querySelectorAll(
+      '.skill-box .skill-progress span'
+    );
+
+    allSkills.forEach((skill) => {
+      skill.style.width = skill.dataset.progress;
+    });
+  }
+};

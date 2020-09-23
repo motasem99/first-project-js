@@ -244,7 +244,7 @@ body {
 
 .skills .skill-box .skill-progress {
   height: 30px;
-  width: calc(100% - 110px);
+  width: 100%;
   background-color: #f6f6f6;
   border-radius: 6px;
   position: relative;
@@ -255,9 +255,10 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  width: 45%;
+  width: 0;
   height: 100%;
   background-color: var(--main-color);
+  transition: all 0.5s;
 }
 
 /* End Skills */
