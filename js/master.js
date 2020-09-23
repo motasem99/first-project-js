@@ -38,9 +38,9 @@ if (backgroundLocalItem !== null) {
   });
 
   if (backgroundLocalItem === 'true') {
-    document.querySelector('random-backgrounds .yes').classList.add('active');
+    document.querySelector('.random-backgrounds .yes').classList.add('active');
   } else {
-    document.querySelector('random-backgrounds .no').classList.add('active');
+    document.querySelector('.random-backgrounds .no').classList.add('active');
   }
 }
 
