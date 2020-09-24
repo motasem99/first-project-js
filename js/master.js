@@ -68,13 +68,7 @@ colorsLi.forEach((li) => {
     // set color on local storage
     localStorage.setItem('color_option', e.target.dataset.color);
 
-    // remove active class from all children
-    e.target.parentElement.querySelectorAll('.active').forEach((element) => {
-      element.classList.remove('active');
-    });
-
-    // add active class on self
-    e.target.classList.add('active');
+    handleActive(e);
   });
 });
 
@@ -85,13 +79,8 @@ const randomBackEl = document.querySelectorAll('.random-backgrounds span');
 randomBackEl.forEach((span) => {
   // click on every span
   span.addEventListener('click', (e) => {
-    // remove active class from all children
-    e.target.parentElement.querySelectorAll('.active').forEach((element) => {
-      element.classList.remove('active');
-    });
+    handleActive(e);
 
-    // add active class on self
-    e.target.classList.add('active');
     if (e.target.dataset.backgrounds === 'yes') {
       backgroundOption = true;
       randomizeImgs();
@@ -248,3 +237,15 @@ function scrollToSomewhere(element) {
 
 scrollToSomewhere(allBullets);
 scrollToSomewhere(allLinks);
+
+// handling active state
+
+function handleActive(ev) {
+  // remove active class from all children
+  ev.target.parentElement.querySelectorAll('.active').forEach((element) => {
+    element.classList.remove('active');
+  });
+
+  // add active class on self
+  ev.target.classList.add('active');
+}
