@@ -630,6 +630,12 @@ body {
     width: calc(100% / 2);
   }
 }
+
+@media (max-width: 575px) {
+  .features .feat-box {
+    width: 100%;
+  }
+}
 .features .feat-box img {
   width: 150px;
 }
