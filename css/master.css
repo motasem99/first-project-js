@@ -699,3 +699,35 @@ body {
 }
 
 /* End Contact Us */
+
+/* Start Grid System */
+
+@media (min-width: 576px) {
+  /* small devices => landscape phones*/
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* medium devices => tablets*/
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* desktop */
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* large screen */
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* End Grid System */
