@@ -225,8 +225,9 @@ body {
   margin-bottom: 15px;
   display: none;
   position: relative;
+  top: 15px;
 }
-.header-area .toggle-menu::before {
+.header-area .toggle-menu.menu-active:before {
   content: '';
   border-width: 10px;
   border-style: solid;
