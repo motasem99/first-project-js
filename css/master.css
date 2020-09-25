@@ -184,6 +184,10 @@ body {
   top: 0;
   z-index: 1;
 }
+.landing-page .container {
+  position: relative;
+  z-index: 1000;
+}
 .header-area {
   position: relative;
   z-index: 2;
@@ -253,10 +257,21 @@ body {
   z-index: 2;
   color: #fff;
   text-align: center;
+  width: 95%;
+}
+@media (max-width: 575px) {
+  .introduction-text {
+    font-size: 26px;
+  }
 }
 .introduction-text h1 {
   font-size: 34px;
   margin: 0 0 12px;
+}
+@media (max-width: 575px) {
+  .introduction-text {
+    font-size: 26px;
+  }
 }
 .introduction-text h1 span {
   color: var(--main-color);
@@ -302,9 +317,20 @@ body {
   padding-bottom: 50px;
   display: flex;
 }
+@media (max-width: 767px) {
+  .about-us {
+    display: block;
+    text-align: center;
+  }
+}
 .about-us .info-box {
   flex: 1;
   padding: 10px;
+}
+@media (max-width: 767px) {
+  .about-us .info-box {
+    padding: 0;
+  }
 }
 .about-us .info-box h2 {
   font-weight: bold;
@@ -346,14 +372,23 @@ body {
   padding: 15px;
   margin-bottom: 15px;
 }
-
+@media (max-width: 767px) {
+  .skills .skill-box {
+    display: block;
+  }
+}
 .skills .skill-box .skill-name {
   font-weight: bold;
   width: 140px;
   text-align: center;
   line-height: 30px;
 }
-
+@media (max-width: 767px) {
+  .skills .skill-box .skill-name {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
 .skills .skill-box .skill-progress {
   height: 30px;
   width: 100%;
@@ -380,6 +415,7 @@ body {
 .gallery {
   padding-top: 50px;
   padding-bottom: 50px;
+  text-align: center;
 }
 .gallery h2 {
   font-weight: bold;
